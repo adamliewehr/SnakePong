@@ -270,7 +270,7 @@ while True:
             segments_b.clear()
 
     # check if snake goes off-screen, if so reset position
-    if head_a.xcor() >= 400 or head_a.ycor() >= 300:
+    if head_a.xcor() >= 400 or head_a.ycor() >= 300 or head_a.xcor() <= -400 or head_a.ycor() <= -300:
         head_a.goto(200, 0)
         head_a.direction = "stop"
 
@@ -281,7 +281,7 @@ while True:
         # Clear the segments_a list
         segments_a.clear()
 
-    if head_b.xcor() >= 400 or head_b.ycor() >= 300:
+    if head_b.xcor() >= 400 or head_b.ycor() >= 300 or head_b.xcor() <= -400 or head_b.ycor() <= -300:
         head_b.goto(-200, 0)
         head_b.direction = "stop"
 
